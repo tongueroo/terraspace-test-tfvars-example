@@ -22,9 +22,10 @@ describe "main" do
     # Replace with your own test
     expect(true).to be true
     # Example
-    # pp terraspace.outputs
-    output_value = terraspace.output("demo", "bucket_name")
-    puts "output_value #{output_value}"
+    pp terraspace.outputs
+    output_value = terraspace.output("demo", "pet_id")
+    length = output_value.split('-').size
+    expect(length).to eq 1
     # More useful helpers:
     # pp terraspace.state['resources']
     # pp terraspace.state_resource('random_pet.this')
